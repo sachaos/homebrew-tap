@@ -2,8 +2,8 @@ class Atcoder < Formula
   desc "Unofficial CLI for AtCoder users"
   homepage "https://github.com/sachaos/atcoder"
 
-  url "https://github.com/sachaos/atcoder/archive/v0.2.2.tar.gz"
-  sha256 "d8d73cf0ab7f067853aa74d5d004f2f278264b981c47eaa6b04653dbba37fc39"
+  url "https://github.com/sachaos/atcoder/archive/v0.2.3.tar.gz"
+  sha256 "ff0c6ef5d54ba43586fcab3862a3174101aab3085bf6fb8fc4f5928a269468ab"
   head "https://github.com/sachaos/atcoder.git"
 
   depends_on "go" => :build
