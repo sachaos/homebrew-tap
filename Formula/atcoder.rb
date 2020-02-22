@@ -1,4 +1,4 @@
-class AtCoder < Formula
+class Atcoder < Formula
   desc "Unofficial CLI for AtCoder users"
   homepage "https://github.com/sachaos/atcoder"
 
