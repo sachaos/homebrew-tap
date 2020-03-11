@@ -2,16 +2,16 @@
 class Atcoder < Formula
   desc "Unofficial CLI for AtCoder users"
   homepage "https://github.com/sachaos/atcoder"
-  version "0.2.11"
+  version "0.2.12"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sachaos/atcoder/releases/download/v0.2.11/atcoder_0.2.11_Darwin_x86_64.tar.gz"
-    sha256 "17d0da03ad9e59ccf98f7411cabef7eaa6ea2d142748071931e85fc67f3a5813"
+    url "https://github.com/sachaos/atcoder/releases/download/v0.2.12/atcoder_0.2.12_Darwin_x86_64.tar.gz"
+    sha256 "6cfb918222cd88059820c70b522e0988f0e897ebe2b730396a3fb44c755eb571"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/atcoder/releases/download/v0.2.11/atcoder_0.2.11_Linux_x86_64.tar.gz"
-      sha256 "0a9c6f2805aeeb6ed6abf005bb4569389ffe846d76eac384d263aee12b0f5464"
+      url "https://github.com/sachaos/atcoder/releases/download/v0.2.12/atcoder_0.2.12_Linux_x86_64.tar.gz"
+      sha256 "25266ff06bd5d22f219909ae8d58c79f4dddec78222ce4519d759a961160198f"
     end
   end
 
