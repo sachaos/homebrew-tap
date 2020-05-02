@@ -2,16 +2,16 @@
 class AcDeck < Formula
   desc "Unofficial CLI for AtCoder users"
   homepage "https://github.com/sachaos/ac-deck"
-  version "0.3.0"
+  version "0.3.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sachaos/ac-deck/releases/download/v0.3.0/ac-deck_0.3.0_Darwin_x86_64.tar.gz"
-    sha256 "80315dff449642411f4e2ef56ee4ba37114a7d606eb98d4d3fd2037fe005549a"
+    url "https://github.com/sachaos/ac-deck/releases/download/v0.3.1/ac-deck_0.3.1_Darwin_x86_64.tar.gz"
+    sha256 "6ca4590fff11470e5f3d6cec3ae5f2793385d32576aadc322ebb8212af650e62"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/ac-deck/releases/download/v0.3.0/ac-deck_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "dd06f137e264bb5ce56ad5b59cf26171a29dd68d1d43535766664451002b9bb8"
+      url "https://github.com/sachaos/ac-deck/releases/download/v0.3.1/ac-deck_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "a54c4d7fc67173882897b926ebc13510b7d7531cb2dfd654a8719307f780bb5a"
     end
   end
 
