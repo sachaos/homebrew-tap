@@ -2,16 +2,23 @@
 class GoStarz < Formula
   desc "Show GitHub stars"
   homepage "https://github.com/sachaos/go-starz"
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sachaos/go-starz/releases/download/v0.0.1/go-starz_0.0.1_Darwin_x86_64.tar.gz"
-    sha256 "8e7b75c882a0e54b54a2519508ea00fbbdae366a299dacb5b2f053c2765b9482"
+    url "https://github.com/sachaos/go-starz/releases/download/v0.0.2/go-starz_0.0.2_Darwin_x86_64.tar.gz"
+    sha256 "035de7835b72091e11e73924c8fa8489a7fb752ff14510657cf68fb1591c389e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/go-starz/releases/download/v0.0.1/go-starz_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "571a968e4bcefdabe3641777fe92c7a2e4ab07381dba75d7f40b368f1972737d"
+      url "https://github.com/sachaos/go-starz/releases/download/v0.0.2/go-starz_0.0.2_Linux_x86_64.tar.gz"
+      sha256 "6e0f304138c22b74932a60df3656908c88a0d204382ae38cbf07a2fe82c21b18"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+      else
+        url "https://github.com/sachaos/go-starz/releases/download/v0.0.2/go-starz_0.0.2_Linux_armv6.tar.gz"
+        sha256 "bba76e668de32c9cd92a43c98c803174bf069428d7a515aa7e4db46d25d58d57"
+      end
     end
   end
 
