@@ -5,20 +5,20 @@
 class Toggl < Formula
   desc "Toggl CLI client"
   homepage "https://github.com/sachaos/toggl"
-  version "0.5.0"
+  version "0.5.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/toggl/releases/download/v0.5.0/toggl_0.5.0_Darwin_x86_64.tar.gz"
-      sha256 "e0b364da77ca0b6a47d90f37921eb33107f97da596d41626b597ba0918e2d23e"
+      url "https://github.com/sachaos/toggl/releases/download/v0.5.1/toggl_0.5.1_Darwin_x86_64.tar.gz"
+      sha256 "0714d153fbaa75df34185c37142ed6e2d2d98b92c2940c9d9ff08caf63f92167"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/toggl/releases/download/v0.5.0/toggl_0.5.0_Linux_x86_64.tar.gz"
-      sha256 "f0f0bc3a2f40d718e75a9dd6a6d14c762f92dc51f019b4950ef2b27a75718485"
+      url "https://github.com/sachaos/toggl/releases/download/v0.5.1/toggl_0.5.1_Linux_x86_64.tar.gz"
+      sha256 "46d4916190c48f85bd9bdc87c5db3d49a11fe7f127f2c5f6a7fef461cd2fbdf9"
     end
   end
 
