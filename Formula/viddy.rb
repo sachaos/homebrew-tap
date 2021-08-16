@@ -11,14 +11,14 @@ class Viddy < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/sachaos/viddy/releases/download/v0.1.0/viddy_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "7b516a15eedc64be4849b633836dcc9b6748b66474ebe59d590f4b348daf4b96"
+      sha256 "ebb3ca59b4b2d842e35f9dd908a86cdf1994233f20430f76129599d3238f2892"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/sachaos/viddy/releases/download/v0.1.0/viddy_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "687aac236f673fb5f176477f8dd9cce01bdf9354718488f333f3238479fe7544"
+      sha256 "b5abe1dca440ad837a427becb4c62b7367a4398bf2ee125b25aaeb192d27504a"
     end
   end
 
