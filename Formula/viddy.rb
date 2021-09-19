@@ -5,20 +5,20 @@
 class Viddy < Formula
   desc "Modern waach command. Viddy well, gopher. Viddy well."
   homepage "https://github.com/sachaos/viddy"
-  version "0.2.2"
+  version "0.3.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v0.2.2/viddy_0.2.2_Darwin_x86_64.tar.gz"
-      sha256 "e9ea007eab97bc2b3ce4d2e901ada8a6381dcdc3062c454ac3542aaf4ac4019d"
+      url "https://github.com/sachaos/viddy/releases/download/v0.3.0/viddy_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "0d9b2e4e04da585df4bc2c7754eb09ef8d5bc1b1d247f9dd684d33c373cb55c2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v0.2.2/viddy_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "dfc5cde20b2c1ca009793b766dd2de752d8f5792ec04e0b255e0aa470b13e0c5"
+      url "https://github.com/sachaos/viddy/releases/download/v0.3.0/viddy_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "771d8399f3a5cfab1867e5f3618ad56f6321713d100ebaa70d7c4aa27bf3b8ac"
     end
   end
 
