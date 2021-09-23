@@ -5,20 +5,32 @@
 class Viddy < Formula
   desc "Modern waach command. Viddy well, gopher. Viddy well."
   homepage "https://github.com/sachaos/viddy"
-  version "0.3.0"
+  version "0.3.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v0.3.0/viddy_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "0d9b2e4e04da585df4bc2c7754eb09ef8d5bc1b1d247f9dd684d33c373cb55c2"
+      url "https://github.com/sachaos/viddy/releases/download/v0.3.1/viddy_0.3.1_Darwin_x86_64.tar.gz"
+      sha256 "c9217c3727682630ea6845015f03dd9bdd50b2230674446e0b11f35d9abceb18"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/sachaos/viddy/releases/download/v0.3.1/viddy_0.3.1_Darwin_arm64.tar.gz"
+      sha256 "14b3688739c1bac8b9e4f3b7d6937d29262d467eb71d89695854b96dd938c6ef"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v0.3.0/viddy_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "771d8399f3a5cfab1867e5f3618ad56f6321713d100ebaa70d7c4aa27bf3b8ac"
+      url "https://github.com/sachaos/viddy/releases/download/v0.3.1/viddy_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "f63858bd581a37440fd3af681ed2ae06a78272b7c1b3c38d262297a60ff3746f"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sachaos/viddy/releases/download/v0.3.1/viddy_0.3.1_Linux_armv6.tar.gz"
+      sha256 "a4d7bee3e528f777274fb34df857976e040404675cca471742d04bea5919685b"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sachaos/viddy/releases/download/v0.3.1/viddy_0.3.1_Linux_arm64.tar.gz"
+      sha256 "7018086c9ea3c040360d8a7803c5ae99c51f86fafcdbb6a0a46566e4ad7e9db8"
     end
   end
 
