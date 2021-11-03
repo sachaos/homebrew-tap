@@ -5,20 +5,28 @@
 class AcDeck < Formula
   desc "Unofficial CLI for AtCoder users"
   homepage "https://github.com/sachaos/ac-deck"
-  version "0.8.3"
-  bottle :unneeded
+  version "0.8.4"
 
-  if OS.mac?
-    url "https://github.com/sachaos/ac-deck/releases/download/v0.8.3/ac-deck_0.8.3_Darwin_x86_64.tar.gz"
-    sha256 "9072ed785c72ebf69ebeb413af15b73e634992f8f9be9418cbb5b22403e3c636"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sachaos/ac-deck/releases/download/v0.8.3/ac-deck_0.8.3_Linux_x86_64.tar.gz"
-    sha256 "8b03621e7f70f0d41911ff3219b57c33999f1aefd7eb2fbae9d8191dd386cae1"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/sachaos/ac-deck/releases/download/v0.8.4/ac-deck_0.8.4_Darwin_x86_64.tar.gz"
+      sha256 "0cace4ea7596ba77ef5012ae8aeda38d2cf11dce1fecd6049f9205e0f7a23492"
+
+      def install
+        bin.install "acd"
+      end
+    end
   end
 
-  def install
-    bin.install "acd"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/sachaos/ac-deck/releases/download/v0.8.4/ac-deck_0.8.4_Linux_x86_64.tar.gz"
+      sha256 "34cd97a9d8828c2df2fe826135471ad70010fcf08bec4bd78fb735f399fd11a6"
+
+      def install
+        bin.install "acd"
+      end
+    end
   end
 
   test do
