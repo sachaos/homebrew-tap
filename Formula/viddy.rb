@@ -5,20 +5,20 @@
 class Viddy < Formula
   desc "Modern waach command. Viddy well, gopher. Viddy well."
   homepage "https://github.com/sachaos/viddy"
-  version "0.3.6"
+  version "0.4.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v0.3.6/viddy_0.3.6_Darwin_x86_64.tar.gz"
-      sha256 "b8e5195d316e8a70345b45a3bd3857e549180b7ffddeb16b874ecab2f67737d9"
+    if Hardware::CPU.arm?
+      url "https://github.com/sachaos/viddy/releases/download/v0.4.0/viddy_Darwin_arm64.tar.gz"
+      sha256 "6977266fed2ca9e196b195d6945916c355a9330c1c010b4593ef74f1e1097d06"
 
       def install
         bin.install "viddy"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sachaos/viddy/releases/download/v0.3.6/viddy_0.3.6_Darwin_arm64.tar.gz"
-      sha256 "2ab599d3a5744597c67a7843bcd90d3efaa287f9bb3a328d987942a04436cc41"
+    if Hardware::CPU.intel?
+      url "https://github.com/sachaos/viddy/releases/download/v0.4.0/viddy_Darwin_x86_64.tar.gz"
+      sha256 "4697ccde03114cc8aa41bf4153ea0afe46198efc0fb2bcda85342bbdaaf47d76"
 
       def install
         bin.install "viddy"
@@ -28,24 +28,24 @@ class Viddy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v0.3.6/viddy_0.3.6_Linux_x86_64.tar.gz"
-      sha256 "acfa25b0cda2eca79aa66442197622cda38cdf3af22a604e691f3d21753f19fc"
+      url "https://github.com/sachaos/viddy/releases/download/v0.4.0/viddy_Linux_x86_64.tar.gz"
+      sha256 "c6bd8b9889faa8680ea97c7392efe31788a9700cc5a84a26f9ecd317c932b9ac"
 
       def install
         bin.install "viddy"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sachaos/viddy/releases/download/v0.3.6/viddy_0.3.6_Linux_armv6.tar.gz"
-      sha256 "8643cc580b766de98ede93322d33d914a444ac83142ea49870103229a286c20a"
+      url "https://github.com/sachaos/viddy/releases/download/v0.4.0/viddy_Linux_armv6.tar.gz"
+      sha256 "a4c20bd84d5394285199b74dccaabe6df91f2b4e216cd0bd090df9d9c5bba188"
 
       def install
         bin.install "viddy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sachaos/viddy/releases/download/v0.3.6/viddy_0.3.6_Linux_arm64.tar.gz"
-      sha256 "67fa868b628d38f5a08b7edeb5c582e3b721690e6f4304c2210bb732e9f78ede"
+      url "https://github.com/sachaos/viddy/releases/download/v0.4.0/viddy_Linux_arm64.tar.gz"
+      sha256 "1c1871f9569726c21e409233c646180c14e9756f8b1dc067e1ee5969a9a31c8b"
 
       def install
         bin.install "viddy"
