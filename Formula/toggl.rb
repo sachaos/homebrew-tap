@@ -5,25 +5,36 @@
 class Toggl < Formula
   desc "Toggl CLI client"
   homepage "https://github.com/sachaos/toggl"
-  version "0.5.1"
-  bottle :unneeded
+  version "0.6.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sachaos/toggl/releases/download/v0.5.1/toggl_0.5.1_Darwin_x86_64.tar.gz"
-      sha256 "0714d153fbaa75df34185c37142ed6e2d2d98b92c2940c9d9ff08caf63f92167"
+    url "https://github.com/sachaos/toggl/releases/download/v0.6.1/toggl_0.6.1_Darwin_x86_64.tar.gz"
+    sha256 "75f98f47f1045a39db5bf23da858e8f70e7aa4640e890997dadfd20e3da746d9"
+
+    def install
+      bin.install "toggl"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Toggl
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/toggl/releases/download/v0.5.1/toggl_0.5.1_Linux_x86_64.tar.gz"
-      sha256 "46d4916190c48f85bd9bdc87c5db3d49a11fe7f127f2c5f6a7fef461cd2fbdf9"
-    end
-  end
+      url "https://github.com/sachaos/toggl/releases/download/v0.6.1/toggl_0.6.1_Linux_x86_64.tar.gz"
+      sha256 "5340563b946763bed7f4145171396519721adb7dda654bce4788d013396aebae"
 
-  def install
-    bin.install "toggl"
+      def install
+        bin.install "toggl"
+      end
+    end
   end
 
   test do
