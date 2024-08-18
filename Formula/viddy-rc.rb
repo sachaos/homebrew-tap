@@ -9,16 +9,16 @@ class ViddyRc < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.2/viddy-v1.0.0-rc.2-macos-arm64.tar.gz"
-      sha256 "43af8b85a2cbf93628fbcb4130967d999605735846e51fdf52ed96301a9c10ed"
+      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.3/viddy-v1.0.0-rc.3-macos-arm64.tar.gz"
+      sha256 "a88abc58bee87ec9680712b3bfe2a767e5fbdba80000df83e23b46c83b612aa1"
 
       def install
         bin.install "viddy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.2/viddy-v1.0.0-rc.2-linux-x86_64.tar.gz"
-      sha256 "012784a714d84958ea747d562269771fa07c9670c86ac6c8243870393776df7f"
+      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.3/viddy-v1.0.0-rc.3-linux-x86_64.tar.gz"
+      sha256 "23fc760fac3c3faf32741e6ff17c7d2b739e32cb56ec8ea908341f1eec499931"
 
       def install
         bin.install "viddy"
