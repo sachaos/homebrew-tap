@@ -5,20 +5,20 @@
 class ViddyRc < Formula
   desc "Modern watch command. Viddy well, gopher. Viddy well."
   homepage "https://github.com/sachaos/viddy"
-  version "1.0.0-rc.2"
+  version "1.0.0-rc.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.3/viddy-v1.0.0-rc.3-macos-arm64.tar.gz"
-      sha256 "a88abc58bee87ec9680712b3bfe2a767e5fbdba80000df83e23b46c83b612aa1"
+      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.5/viddy-v1.0.0-rc.5-macos-arm64.tar.gz"
+      sha256 "41e0e8a8d1d07c198022ff00105d752cd5552352d1f0328362f278ce0f282096"
 
       def install
         bin.install "viddy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.3/viddy-v1.0.0-rc.3-linux-x86_64.tar.gz"
-      sha256 "23fc760fac3c3faf32741e6ff17c7d2b739e32cb56ec8ea908341f1eec499931"
+      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.5/viddy-v1.0.0-rc.5-linux-x86_64.tar.gz"
+      sha256 "e606b4ea67347afab17f391e55af0d73ba8593fb5c4d66f3dc98f27541f099cc"
 
       def install
         bin.install "viddy"
