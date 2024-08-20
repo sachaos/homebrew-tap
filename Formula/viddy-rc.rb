@@ -17,7 +17,7 @@ class ViddyRc < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.5/viddy-v1.0.0-rc.5-linux-x86_64.tar.gz"
+      url "https://github.com/sachaos/viddy/releases/download/v1.0.0-rc.5/viddy-v1.0.0-rc.5-macos-x86_64.tar.gz"
       sha256 "e606b4ea67347afab17f391e55af0d73ba8593fb5c4d66f3dc98f27541f099cc"
 
       def install
