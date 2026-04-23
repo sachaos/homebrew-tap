@@ -5,20 +5,20 @@
 class Shuire < Formula
   desc "Vim-like TUI git diff viewer"
   homepage "https://github.com/sachaos/shuire"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sachaos/shuire/releases/download/v0.1.1/shuire-v0.1.1-macos-arm64.tar.gz"
-      sha256 "a1f6de310af2bcdf9d545404210ca0c0f546b657b54c27003a8b52d7bd6012c9"
+      url "https://github.com/sachaos/shuire/releases/download/v0.2.0/shuire-v0.2.0-macos-arm64.tar.gz"
+      sha256 "62c546630f4a875e5a8ca28d396896cf4ae4eea3d288c24115999f89b9490463"
 
       def install
         bin.install "shuire"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/shuire/releases/download/v0.1.1/shuire-v0.1.1-macos-x86_64.tar.gz"
-      sha256 "7b26098c4baa311c24e4f7fafe2df3a269f3f87a7b612b5abceb3b632394797c"
+      url "https://github.com/sachaos/shuire/releases/download/v0.2.0/shuire-v0.2.0-macos-x86_64.tar.gz"
+      sha256 "c3a163b207597376573fe810e19da209dbcb8b0aa0a1116115de5020663421e8"
 
       def install
         bin.install "shuire"
@@ -28,16 +28,16 @@ class Shuire < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/shuire/releases/download/v0.1.1/shuire-v0.1.1-linux-x86_64.tar.gz"
-      sha256 "f67ef2ba086f4f56cd5975084719e71235cec2004f2a8707e536a1b0186ce0f5"
+      url "https://github.com/sachaos/shuire/releases/download/v0.2.0/shuire-v0.2.0-linux-x86_64.tar.gz"
+      sha256 "73696012d55e64ec871b61bf80803d14bdeceefb752a12e58ad9f33f46163d00"
 
       def install
         bin.install "shuire"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sachaos/shuire/releases/download/v0.1.1/shuire-v0.1.1-linux-arm64.tar.gz"
-      sha256 "29d4e8dc9ff35c4b9f974cd2ce73a966690b7cadaedb11c8106834b987c7ea59"
+      url "https://github.com/sachaos/shuire/releases/download/v0.2.0/shuire-v0.2.0-linux-arm64.tar.gz"
+      sha256 "6fa0a46baaca820c805eae25f4717469fd85a384c01138ef79440cd6a2608aba"
 
       def install
         bin.install "shuire"
